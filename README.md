@@ -1,3 +1,16 @@
+# Hello SAM
+
+_created by Austin Poor_
+
+This is a small test AWS SAM app that combines multiple Lambda functions (one scheduled and one triggered by API Gateway), creating an S3 bucket, and setting different access to that bucket.
+
+The basic idea of the app is:
+* One function, `HelloScheduleFunction`, is scheduled to run every minute. It writes a JSON file with a timestamp to an S3 bucket, `HelloBucket`.
+* Another function, `HelloReadFunction`, can be triggered by a POST request via API Gateway. It will read all of the JSOn documents in `HelloBucket` and return their contents.
+
+The initial directory structure was created using the [sam cli](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html). The original README, from SAM, is included below.
+
+
 # sam-app
 
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
