@@ -1,7 +1,7 @@
 import os
 import json
 import boto3
-from io import StringIO, BytesIO
+from io import BytesIO
 from datetime import datetime
 
 
